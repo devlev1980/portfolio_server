@@ -1,7 +1,7 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
 const path = require('path');
@@ -14,7 +14,7 @@ app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.listen(process.env.PORT || port, () => console.log("Server running on port", port));
+app.listen(port, () => console.log("Server running on port", port));
 
 app.get("/", (req, res) => {
     console.log(__dirname + "/views");
