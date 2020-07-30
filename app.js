@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
         name: "asdasd"
     });
 });
-app.post('/send',(req,res)=>{
+app.post('/send', async (req,res)=>{
     console.log(req.body);
     const output = `
         <p style="font-size: 20px">You have a new contact request</p>
@@ -54,7 +54,7 @@ app.post('/send',(req,res)=>{
         text: "", // plain text body
         html: output, // html body
     }
-    transporter.sendMail(mailOptions,(error,info)=>{
+    await transporter.sendMail(mailOptions,(error,info)=>{
         if(error){
             console.log('Error',error)
         }else{
