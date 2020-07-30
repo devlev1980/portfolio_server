@@ -18,6 +18,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.get("/", (req, res) => {
     console.log(__dirname + "/views");
     //res.render("index");
+        res.json({
+        name: "asdasd"
+    });
 });
 app.post('/send',(req,res)=>{
     console.log(req.body);
