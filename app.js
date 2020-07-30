@@ -40,7 +40,7 @@ app.post("/send", async (req, res) => {
     secure: false,
     auth: {
       user: "sound1980@gmail.com",
-      pass: "Papa2207kp302s",
+      pass: "Sound2207kp302s$",
     },
   });
 
@@ -60,5 +60,5 @@ app.post("/send", async (req, res) => {
       console.log("Email sent:" + info.response);
     }
   });
-  app.listen(port, () => console.log("Server running on port", port));
 });
+app.listen(port, () => console.log("Server running on port", port));
