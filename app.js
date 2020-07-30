@@ -18,7 +18,7 @@ app.listen(port, () => console.log("Server running on port", port));
 
 app.get("/", (req, res) => {
     console.log(__dirname + "/views");
-    res.render("index");
+    //res.render("index");
 });
 app.post('/send',(req,res)=>{
     console.log(req.body);
