@@ -14,7 +14,6 @@ app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.listen(port, () => console.log("Server running on port", port));
 
 app.get("/", (req, res) => {
     console.log(__dirname + "/views");
@@ -96,4 +95,4 @@ app.post('/send',(req,res)=>{
     // })
 })
 
-
+app.listen(port, () => console.log("Server running on port", port));
