@@ -10,6 +10,6 @@
     "express": "~4.16.1",
     "express-handlebars": "^5.1.0",
     "hbs": "~4.0.4",
-    "nodemailer": "^6.4.10"
+    "nodemailer": "^6.4.16"
   }
 }
